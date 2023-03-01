@@ -1,0 +1,16 @@
+create database fms;
+
+
+create table admin_form(username varchar(25) primary key not null,pswd varchar(16) not null);
+
+
+insert into admin_form values('main_admin@1275','@21adm3456');
+
+
+create table feedback_form(id int(11) unsigned auto_increment primary key not null,mail_id varchar(35) not null,qual varchar(7) not null,feedback text not null);
+
+create table user_form(fullname varchar(30) not null,phone_number varchar(10) not null,email_id varchar(30) not null,username varchar(25) primary key not null,pswd varchar(16) not null);
+
+create table food_don_req(req_no int(11) unsigned auto_increment primary key not null,ngoname varchar(25) not null,ngolocation varchar(25) not null,foodtype varchar(15) not null,quantity int(10) not null,address text not null,contactnum varchar(10) not null,req_dt DATE not null,status char(3) not null);
+
+create table ngo_form(ngoname varchar(30) not null,phone_number varchar(10) not null,email_id varchar(30) not null,ngoid varchar(25) primary key not null,pswd varchar(16) not null,location varchar(25) not null);

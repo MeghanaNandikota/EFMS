@@ -1,0 +1,109 @@
+<?php
+ $conn = new mysqli("localhost","root", "","codingstatus");
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+?>
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+      <!--bootstrap icons stylesheet-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <title>donate</title>
+  </head>
+  <body style="background-color: wheat;">
+  <section>
+        <div class="container mt-5 pt-5 text-dark">
+          <h1 class="text-center fw-bold">FOOD DETAILS</h1>
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 m-auto">
+                    <div class="card border-0 shadow" style="background: transparent;">
+                      <div class="card-body" >
+                        <center><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg></center>
+                        <form action="" method="post">
+                          
+                        
+
+                           
+                              <!-- echo '<span class="error-msg">'.$error.'</span>'; -->
+                         <!-- <p class="text-center">
+                           <button class="btn btn-primary bi bi-chevron-down " data-aos="fade-left" data-aos-duration="1500" type="button" data-bs-toggle="collapse" data-bs-target="#collapsing">
+                           Select an NGO to donate :
+                           </button>
+                          </p>
+                          <div class="collapse" id="collapsing">
+                           <div class="card card-body bg-dark text-light w-50 mx-auto ">
+                            <ol>
+                              <li><a href="duvvada.php" style="text-decoration:none; color:white;">Duvvada</a></li>
+                              <li><a href="akkp.php" style="text-decoration:none; color:white;">Akkayapalem</a></li>
+                              <li><a href="waltair.php" style="text-decoration:none; color:white;">Waltair</a></li>
+                            </ol>
+                           </div>
+                          </div>-->
+                          <p> 
+                                     <h5> FOOD TYPE </h5> 
+                                  <select name="sfood">
+                                        <option value="Select Food Type">Select Food Type</option>
+                                        <option value="Veg">Veg</option>
+                                        <option value="Non-Veg">Non-Veg</option>
+                                        <option value="Both">Both</option>
+                                    </select>
+                                </p>
+                                
+                          <br>
+                          <p> 
+                                     <h5> Food Quantity </h5> 
+                                  <input id="un" name="un" required="required" type="text" style="width:100%; box-sizing:border-box;" placeholder="Enter the count of people for whom the food would be approximately sufficient"/> 
+                                </p>
+                                
+                          <i class="bi bi-geo-fill"></i> NGO location :
+                          <input type="text" name="ngolocation" id="" class="form-control my-3 py-2" placeholder=" NGO location" required>
+                          <i class="bi bi-building"></i> NGO name :
+                          <input type="text" name="ngoname" id="" class="form-control my-3 py-2" placeholder="NGO name" required>
+                          <i class="bi bi-egg-fried"></i> Food name :
+                          <input type="text" name="foodname" id="" class="form-control my-3 py-2" placeholder="Food name">
+                          <i class="bi bi-percent"></i> Quantity:
+                          <input type="text" name="quantity" id="" class="form-control my-3 py-2" placeholder="Quantity">
+                           
+                                
+                          
+                          <!-- <div class="mb-3">
+                          <label for="formFileMultiple" class="form-label"><i class="bi bi-egg-fill"></i> Food image :</label>
+                          <input name="image" class="form-control" type="file" id="formFileMultiple" multiple>
+                          </div> -->
+                         <br>
+                          <i class="bi bi-geo-alt-fill"></i>Address:<br>
+                          <textarea name="address" id="" style="width:100%; box-sizing: border-box;" rows="5" class="my-2" ></textarea>
+                          <i class="bi bi-telephone-fill"></i> Contact number:
+                          <input type="text" name="contactnum" id="" class="form-control my-2 "  placeholder="ex: +91 xxxxx xxxxx" required>
+                          <div class="text-center">
+                            <button class="btn btn-primary px-5 " name="donate">Donate</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <center><a href="index1.php" class="text-dark h5 mt-5"><i class="bi bi-house-door"></i>  Home</button></center>
+        </div>
+    </section>
+    
+    
+    <!--Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
